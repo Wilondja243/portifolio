@@ -10,8 +10,7 @@ export default function Hero() {
 
           <h1 className="hero-title">
             Je conçois des
-            <span> systèmes digitaux</span>
-            <br />
+            <span> systèmes digitaux </span>
             performants & sécurisés
           </h1>
 
@@ -22,7 +21,7 @@ export default function Hero() {
 
           <div className="hero-actions">
             <Button />
-            <a href="#projects" className="hero-link">
+            <a href="#project" className="hero-link">
               Voir mes projets →
             </a>
           </div>

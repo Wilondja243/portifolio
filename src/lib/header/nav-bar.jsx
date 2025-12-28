@@ -1,14 +1,7 @@
-import {Link } from 'react-router-dom';
-import { useEffect } from 'react';
-
-
-import {MyContext} from '../../hooks/use-context';
-import { useContext } from 'react';
 import Button from '../../components/ui/button';
 
 
 export default function NavBar() {
-  const {search,setSearch} = useContext(MyContext);
 
     return (
       <>

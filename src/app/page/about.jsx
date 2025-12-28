@@ -16,10 +16,10 @@ export default function About() {
 
         <div className="skills-list child">
           {[
-            ["Python / Django", 90],
-            ["JavaScript / React", 85],
-            ["React Native", 80],
-            ["AI (ML / DL)", 75],
+            ["Python / Django", 70],
+            ["JavaScript / React", 80],
+            ["React Native", 70],
+            ["AI (ML / DL)", 60],
             ["CyberSécurité", 70],
           ].map(([label, value]) => (
             <div
@@ -38,15 +38,15 @@ export default function About() {
 
       <section ref={statsRef}  className="reveal section stats">
         <div className="stat child">
-          <strong>15+</strong>
+          <strong>8+</strong>
           <span>Projets réalisés</span>
         </div>
         <div className="stat child">
           <strong>3+</strong>
-          <span>Années d’expérience</span>
+          <span>Années d"expérience</span>
         </div>
         <div className="stat child">
-          <strong>10+</strong>
+          <strong>6+</strong>
           <span>Technologies maîtrisées</span>
         </div>
       </section>

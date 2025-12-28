@@ -10,9 +10,9 @@ export default function Footer() {
 
         <ul className="footer-nav">
           <li><a href="/">Accueil</a></li>
-          <li><a href="/project">Projets</a></li>
-          <li><a href="/about">À propos</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="#project">Projets</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
       </div>
