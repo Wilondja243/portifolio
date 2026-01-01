@@ -14,12 +14,28 @@ import About from './app/page/about';
 import Service from './app/page/service';
 
 
-// styles css
+import Loading from './components/ui/loading';
 
+
+// styles css
 import './styleSheet/App.css';
 
     
 export default function App() {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(()=> {
+    const timer = setTimeout(()=>{
+      setLoading(false)
+    }, 3000);
+
+    return ()=> clearTimeout(timer);
+  }, [])
+
+  if(loading){
+    return <Loading />
+  }
+
   return (
     <UseContext>
       <Routes>

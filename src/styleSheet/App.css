@@ -216,7 +216,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   perspective: 1500px;
 }
@@ -231,7 +231,6 @@ header {
   will-change: transform;
 }
 
-/* Pause de l'animation au survol pour pouvoir lire */
 .hero-item:hover {
   animation-play-state: paused;
   transform: rotateX(0deg) rotateY(0deg) scale(1.1);
@@ -274,7 +273,7 @@ header {
 .top { transform: rotateX(90deg) translateZ(35px); }
 .bottom { transform: rotateX(-90deg) translateZ(35px); }
 
-.ai{transform: rotateY(-10deg) rotateX(10deg);}
+.ai{transform: rotateY(-10deg) rotateX(15deg);}
 .security{transform: rotateY(-10deg) rotateX(15deg); margin-left: -30px;}
 .mobile{transform: rotateY(-10deg) rotateX(15deg); margin-left: -60px;}
 .web{transform: rotateY(-10deg) rotateX(15deg); margin-left: -90px;}
@@ -329,6 +328,9 @@ header {
 
   .hero-actions {
     justify-content: center;
+  }
+  .hero-visual{
+    padding: 3em 0;
   }
 }
 

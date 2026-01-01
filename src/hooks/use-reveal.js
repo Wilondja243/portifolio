@@ -12,12 +12,11 @@ export default function useRevealOnScroll(){
             ([entry]) =>{
                 if(entry.isIntersecting){
                     el.classList.add("is-visible");
-                    // el.classList.add("is-card-visible");
                     observer.unobserve(entry.target);
                 }
             },
             {
-                threshold: 0.3
+                threshold: 0.2
             }
         )
         observer.observe(el);

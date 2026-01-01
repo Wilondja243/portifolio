@@ -35,7 +35,7 @@ export default function Project(){
 
                             <div className="links">
                                 <p className="role"><strong>Rôle :</strong> {project.role}</p>
-                                <a href={project.demo} target="_blank" rel='noreferrer'>Voir le projet</a>
+                                <a href={project.demo} target="_blank" rel='noreferrer'>{project.detail}</a>
                             </div>
                         </div>
                     </div>

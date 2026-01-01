@@ -28,12 +28,23 @@ export const services = [
 
 export const projects = [
   {
+    title: "Monalina Website",
+    image: "/projects/uiux.jpg",
+    description: "Le site officiel de Monalina",
+    tech: ["Django", "PostgreSql"],
+    role: "Full-Stack Developer",
+    detail: "Voir le projet",
+    demo: "https://monalina.onrender.com",
+    github: "#"
+  },
+  {
     title: "Gestion de Stock",
     image: "/projects/uiux.jpg",
     description: "Application de gestion pour faciliter la vente et la mise en oeuvre de bien et services.",
     tech: ["Django", "PostgreSql"],
     role: "Full-Stack Developer",
-    demo: "#",
+    detail: "Voir le projet",
+    demo: "https://jobboard-u8g5.onrender.com",
     github: "#"
   },
   {
@@ -42,6 +53,7 @@ export const projects = [
     description: "Un réseau social public, ouvert et visible pour tout le monde.",
     tech: ["Django DRF", "PostgreSql", "React Native"],
     role: "Full-Stack Developer",
+    detail: "Voir le détails",
     demo: "#",
     github: "#"
   },
@@ -51,7 +63,8 @@ export const projects = [
     description: "Un réseau social public, ouvert et visible pour tout le monde.",
     tech: ["Django", "PostgreSql"],
     role: "Full-Stack Developer",
-    demo: "#",
+    detail: "Voir le projet",
+    demo: "https://dealflow-9wex.onrender.com",
     github: "#"
   }
 ];
