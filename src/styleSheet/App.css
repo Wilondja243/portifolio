@@ -218,7 +218,7 @@ header {
   justify-content: center;
   gap: 15px;
   align-items: center;
-  perspective: 1000px;
+  perspective: 1500px;
 }
 
 .hero-item {
@@ -228,6 +228,7 @@ header {
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
   animation: rotateContinuous 12s infinite linear;
+  will-change: transform;
 }
 
 /* Pause de l'animation au survol pour pouvoir lire */
@@ -249,12 +250,15 @@ header {
   text-align: center;
   font-size: 0.8rem;
   box-sizing: border-box;
-  backface-visibility: visible;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .front, .backm .top, .bottom {
-  width: 250px;
-  height: 70px;
+  width: 251px;
+  height: 71px;
 }
 .right, .left {
   width: 70px; 
