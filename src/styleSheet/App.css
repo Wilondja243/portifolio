@@ -118,7 +118,7 @@ header {
     left: 0;
   }
   .nav-list ul.hidden-left{
-    left: -100%;
+    left: -200%;
   }
   .nav-list ul.displayNav{
     display: block;
@@ -216,7 +216,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
   perspective: 1000px;
 }
@@ -272,8 +272,8 @@ header {
 
 .ai{transform: rotateY(-10deg) rotateX(10deg);}
 .security{transform: rotateY(-10deg) rotateX(15deg); margin-left: -30px;}
-.mobile{transform: rotateY(-10deg) rotateX(20deg); margin-left: -60px;}
-.web{transform: rotateY(-10deg) rotateX(20deg); margin-left: -90px;}
+.mobile{transform: rotateY(-10deg) rotateX(15deg); margin-left: -60px;}
+.web{transform: rotateY(-10deg) rotateX(15deg); margin-left: -90px;}
 
 .face i {
   font-size: 2rem;
@@ -326,6 +326,10 @@ header {
   .hero-actions {
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .security, .mobile, .web{margin-left: 0;}
 }
 
 
