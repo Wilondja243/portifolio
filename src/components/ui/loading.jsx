@@ -1,7 +1,7 @@
 
-export default function Loading(){
+export default function Loading({active}){
     return (
-        <div className="loader-overlay">
+        <div className={`loader-overlay ${!active ? 'fade-out' : ''}`}>
             <div className="loader-container">
                 <div className="outer-border"></div>
                 

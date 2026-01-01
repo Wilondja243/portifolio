@@ -4,17 +4,17 @@ import { useState } from 'react';
 export default function useLoginValidation() {
     const [errors, setErrors] = useState({});
 
-    const handleSubmit = ({ identifier, password }) => {
+    const handleSubmit = ({ username, subject, description }) => {
+        const newErrors = {};
 
-        if (!identifier) {
-            errors.identifier = 'nom ou email réquis.';
+        if (!username || !subject || !description) {
+            newErrors.all = "Tous les champs sont réquis";
+        }
+        if(username && username.length <= 5){
+            newErrors.username = "Le titre est trop court."
         }
 
-        if (!password) {
-            errors.password = 'mot de passe requis.';
-        }
-
-        setErrors(errors);
+        setErrors(newErrors);
         return Object.keys(errors).length === 0;
     };
 

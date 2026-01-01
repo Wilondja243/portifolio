@@ -665,7 +665,7 @@ main{
 }
 
 .contact-form {
-  max-width: 420px;
+  max-width: 500px;
   margin: auto;
   padding: 30px;
   background: var(--bs-card);
@@ -703,6 +703,18 @@ main{
 .contact-form button {
   margin-top: 10px;
 }
+
+.errors{
+  color: #ca0000;
+  background: rgba(196, 0, 0, 0.11);
+  border: 1px solid var(--bs-border);
+  text-align: center;
+  font-weight: bold;
+  padding: 13px 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 500px) {

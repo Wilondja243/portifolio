@@ -22,28 +22,38 @@ import './styleSheet/App.css';
 
     
 export default function App() {
-  const [loading, setLoading] = React.useState(true);
+  const [isReady, setIsReady] = React.useState(false);
 
   React.useEffect(()=> {
-    const timer = setTimeout(()=>{
-      setLoading(false)
-    }, 3000);
+    const handleLoad = () => {
+      setIsReady(true)
+    }
+    
+    if(document.readyState == 'complete'){
+      handleLoad();
+    }
+    else{
+      window.addEventListener('load', handleLoad);
 
-    return ()=> clearTimeout(timer);
+      return ()=> window.removeEventListener('load', handleLoad);
+    }
   }, [])
-
-  if(loading){
-    return <Loading />
-  }
 
   return (
     <UseContext>
-      <Routes>
-        <Route path="/" element={<Router />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/project" element={<ProjectScreen />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Loading active={!isReady} />
+      <div style={{ 
+        visibility: isReady ? 'visible' : 'hidden',
+        opacity: isReady ? 1 : 0,
+        transition: 'opacity 0.5s ease'
+      }}>
+        <Routes>
+          <Route path="/" element={<Router />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/project" element={<ProjectScreen />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </UseContext>
   );
 }

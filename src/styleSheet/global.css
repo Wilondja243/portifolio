@@ -138,6 +138,18 @@ section{
   animation-delay: 1.5s;
 }
 
+.loader-overlay {
+  transition: opacity 0.8s ease, visibility 0.8s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* --- ANIMATIONS --- */
 
 @keyframes propagate {
