@@ -77,7 +77,7 @@ export default function About() {
           <div
             // ref={btnRef}
             className="experience"
-            onClick={() => showModal("exp1")}
+            onClick={() => setModal("exp1")}
           >
             <span className="year">2025</span>
             <p>IA & Sécurité - Projets personnels et recherches</p>
