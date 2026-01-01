@@ -21,14 +21,15 @@ export default function Project(){
                     <div className="child item" key={index}>
                         <img src={project.image} alt={project.title} />
 
-                        <div className="detail">
+                        <div className="header-item">
                             <h2>{project.title}</h2>
-
                             <p>{project.description}</p>
+                        </div>
 
+                        <div className="detail">
                             <div className="tech">
                                 {project.tech.map((t, i) => (
-                                <span key={i} className="tag">{t}</span>
+                                    <span key={i} className="tag">{t}</span>
                                 ))}
                             </div>
 

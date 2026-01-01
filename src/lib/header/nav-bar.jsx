@@ -18,7 +18,9 @@ export default function NavBar() {
               <li><a className='link' href="#about">About</a></li>
               <li><a className='link' href="#contact">Contact</a></li>
             </ul>
-            <Button />
+            <button className='menu-btn'>
+              <i className="bi bi-list"></i>
+            </button>
           </nav>
         </div>
       </>

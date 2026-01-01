@@ -17,7 +17,7 @@ export default function Router(){
       <div className='container'>
         <header>
           <NavBar />
-          <div className='thumbenail-container'>
+          <div>
             <Hero />
           </div>
         </header>
@@ -25,7 +25,7 @@ export default function Router(){
       <main>
         <About />
         <Service />
-        <Project />
+        <Project /> 
         <Contact />
       </main>
       <footer>

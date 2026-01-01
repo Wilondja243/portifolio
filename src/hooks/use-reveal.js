@@ -12,8 +12,8 @@ export default function useRevealOnScroll(){
             ([entry]) =>{
                 if(entry.isIntersecting){
                     el.classList.add("is-visible");
-                    el.classList.add("is-card-visible");
-                    // observer.unobserve();
+                    // el.classList.add("is-card-visible");
+                    observer.unobserve(entry.target);
                 }
             },
             {

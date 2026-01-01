@@ -12,7 +12,7 @@ export const projects = [
     title: "OpenHouse",
     image: "/projects/uiux.jpg",
     description: "Un réseau social public, ouvert et visible pour tout le monde.",
-    tech: ["Django Rest Framework", "PostgreSql", "React Native expo"],
+    tech: ["Django DRF", "PostgreSql", "React Native"],
     role: "Full-Stack Developer",
     demo: "#",
     github: "#"

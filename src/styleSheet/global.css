@@ -59,14 +59,13 @@ p, small, b, a, li{
     word-wrap: break-word;
 }
 
-
 .btn{
-    padding: 13px;
+    padding: 10px;
     color: var(--bs-text);
     border-radius: var(--bs-radius);
     background: var(--bs-tint);
     font-weight: bold;
-    font-size: 19px;
+    font-size: clamp(17px, 4vw, 19px);
     border: none;
     box-shadow: var(--bs-shadow);
     cursor: pointer;
