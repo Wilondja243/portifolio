@@ -1,5 +1,5 @@
 import {Link } from 'react-router-dom';
-import { projects } from '../../data/project';
+import { projects } from '../../data/data';
 import useRevealOnScroll from '../../hooks/use-reveal';
 
 

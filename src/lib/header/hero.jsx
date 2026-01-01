@@ -1,5 +1,7 @@
 import Button from "../../components/ui/button";
 
+
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -28,11 +30,30 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual">
+          <Box3D title="Intelligence Artificielle" icon="bi bi-cpu-fill" colorClass="ai" />
+          <Box3D title="CyberSécurité" icon="bi bi-shield-lock-fill" colorClass="security" />
+          <Box3D title="Développement Mobile" icon="bi bi-phone-fill" colorClass="mobile" />
+          <Box3D title="Développement Web" icon="bi bi-display-fill" colorClass="web" />
+      
           <div className="glow"></div>
-          <img src="images/black-femal.png" alt="portrait" />
         </div>
 
       </div>
     </section>
   );
 }
+
+
+const Box3D = ({ title, icon, colorClass }) => (
+  <div className={`hero-item ${colorClass}`}>
+    <div className="face front">
+      <i className={`bi ${icon}`}></i>
+      <h3>{title}</h3>
+    </div>
+    <div className="face back"></div>
+    <div className="face right"></div>
+    <div className="face left"></div>
+    <div className="face top"></div>
+    <div className="face bottom"></div>
+  </div>
+);

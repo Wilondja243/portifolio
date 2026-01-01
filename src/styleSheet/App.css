@@ -5,7 +5,7 @@
 /* header style */
 
 header {
-  background: var(--bs-card);
+  background: url('../../public/svg/bg.svg');
 }
 
 .navigation {
@@ -136,7 +136,7 @@ header {
 /* thumbenail content style */
 
 .hero {
-    left: -100%;
+  /* left: -100%; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -213,15 +213,87 @@ header {
 
 /* VISUEL */
 .hero-visual {
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 20px;
+  align-items: center;
+  perspective: 1000px;
 }
 
-.hero-visual img {
-  z-index: 2;
-  filter: grayscale(30%);
+.hero-item {
+  width: 250px;
+  height: 70px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  animation: rotateContinuous 12s infinite linear;
 }
+
+/* Pause de l'animation au survol pour pouvoir lire */
+.hero-item:hover {
+  animation-play-state: paused;
+  transform: rotateX(0deg) rotateY(0deg) scale(1.1);
+}
+
+.face {
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  background: var(--bs-tint);
+  border: 1px solid #c4c4c442;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  backface-visibility: visible;
+}
+
+.front, .backm .top, .bottom {
+  width: 250px;
+  height: 70px;
+}
+.right, .left {
+  width: 70px; 
+  height: 70px;
+  left: 90px;
+}
+
+/* Positionnement des 6 faces pour créer le volume */
+.front { transform: rotateY(0deg) translateZ(35px); }
+.back { transform: rotateY(180deg) translateZ(35px); }
+.right { transform: rotateY(90deg) translateZ(125px); }
+.left { transform: rotateY(-90deg) translateZ(125px); }
+.top { transform: rotateX(90deg) translateZ(35px); }
+.bottom { transform: rotateX(-90deg) translateZ(35px); }
+
+.ai{transform: rotateY(-10deg) rotateX(10deg);}
+.security{transform: rotateY(-10deg) rotateX(15deg); margin-left: -30px;}
+.mobile{transform: rotateY(-10deg) rotateX(20deg); margin-left: -60px;}
+.web{transform: rotateY(-10deg) rotateX(20deg); margin-left: -90px;}
+
+.face i {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #5e3023;
+}
+.face h3 {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* Animation de rotation fluide */
+/* @keyframes rotateContinuous {
+  from { transform: rotateX(-20deg) rotateY(0deg); }
+  to { transform: rotateX(-20deg) rotateY(360deg); }
+} */
+
+
 
 /* GLOW */
 .hero-visual .glow {
