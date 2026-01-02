@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Toaster } from 'react-hot-toast';
 
 // useContext
 import { UseContext } from './hooks/use-context';
@@ -35,7 +36,7 @@ export default function App() {
     else{
       window.addEventListener('load', handleLoad);
 
-      return ()=> window.removeEventListener('load', handleLoad);
+      return ()=> window.removeEventListener('lead', handleLoad);
     }
   }, [])
 
@@ -44,9 +45,12 @@ export default function App() {
       <Loading active={!isReady} />
       <div style={{ 
         visibility: isReady ? 'visible' : 'hidden',
+        overflow: isReady ? 'visible' : 'hidden',
+        height: isReady ? 'auto' : '100vw',
         opacity: isReady ? 1 : 0,
         transition: 'opacity 0.5s ease'
       }}>
+        <Toaster position='top-right' reverseOrder={false} />
         <Routes>
           <Route path="/" element={<Router />} />
           <Route path="/contact" element={<Contact />} />

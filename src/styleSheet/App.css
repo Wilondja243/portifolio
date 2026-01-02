@@ -332,6 +332,9 @@ header {
   .hero-visual{
     padding: 3em 0;
   }
+  .hero-item{
+    transform: rotateX(8deg) rotateY(0deg);
+  }
 }
 
 @media screen and (max-width: 500px) {

@@ -22,7 +22,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <Button />
+            <Button text="Nous contactez" />
             <a href="#project" className="hero-link">
               Voir mes projets →
             </a>

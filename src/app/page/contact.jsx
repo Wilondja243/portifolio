@@ -1,4 +1,6 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import Button from "../../components/ui/button";
 import useLoginValidation from "../../hooks/use-contact-validation";
 
@@ -17,6 +19,38 @@ export default function Contact() {
 
     if(isValid){
       setIsSending(true);
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: username,
+          subject: subject,
+          message: description,
+          reply_to: "monalinacampany@gmail.com",
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      ).then(()=> {
+        toast.success('Message envoyé avec success !', {
+          style: {
+            border: '1px solid #009776',
+            padding: '16px',
+            color: '#009776',
+            background: '#171c22',
+          },
+          iconTheme: {
+            primary: '#009776',
+            secondary: '#FFFAEE',
+          },
+        });
+
+        setIsSending(false);
+        setUsername("");
+        setSubject("");
+        setDescription("");
+      }).catch(error => {
+        console.log("Error: ", error)
+        setIsSending(false);
+      })
     }
   }
     

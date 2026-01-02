@@ -7,21 +7,6 @@ export default function About() {
   const expRef = useRevealOnScroll();
 
   const [modal, setModal] = useState(null);
-  const btnRef = useRef().current;
-  console.log(btnRef)
-  const modalRef = useRef().current;
-
-  // const showModal = (exp) => {
-  //   btnRef.addEventListener('click', ()=> {
-  //     if(modalRef.classList.containes("modal")){
-  //       modalRef.classList.add("is-modal-visible");
-  //       setModal(exp);
-  //     }
-  //     else{
-  //       modalRef.classList.remove("is-modal-visible");
-  //     }
-  //   })
-  // }
 
   return (
     <main className="skills-page">
@@ -114,7 +99,7 @@ export default function About() {
 
       {modal && (
         <div className="modal-backdrop" onClick={() => setModal(null)}>
-          <div ref={modalRef} className="modal" onClick={(e) => e.stopPropagation()}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h3>Détails</h3>
             <p>
               {modal === "exp1" &&

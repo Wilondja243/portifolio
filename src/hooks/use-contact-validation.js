@@ -10,8 +10,8 @@ export default function useLoginValidation() {
         if (!username || !subject || !description) {
             newErrors.all = "Tous les champs sont réquis";
         }
-        if(username && username.length <= 5){
-            newErrors.username = "Le titre est trop court."
+        if(subject && subject.length <= 5){
+            newErrors.username = "Le sujet doit être clair."
         }
 
         setErrors(newErrors);
