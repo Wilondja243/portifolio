@@ -340,6 +340,10 @@ header {
 
 /* Feature project style */
 
+.feature-section{
+  padding: 4em 0;
+}
+
 .feature-wrapper {
   position: relative;
   padding: 50px 20px;
@@ -367,7 +371,7 @@ header {
   
   text-align: center;
   transition: all 0.5s ease;
-  transform: scale(0.6) translateY(350px);
+  transform: scale(0.65) translateY(300px);
   overflow: hidden;
 }
 
@@ -432,7 +436,7 @@ header {
 
 .section {
   width: 85%;
-  margin: 100px auto;
+  margin: 20px auto 80px auto;
 }
 
 .skills-list {
