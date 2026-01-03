@@ -28,7 +28,7 @@ export default function Feature() {
                             </div>
                         </div>
 
-                        <a className="btn">
+                        <a href="#" className="btn">
                             VOIR LE CONCEPT <i className="bi bi-arrow-right"></i>
                         </a>
                     </div>
