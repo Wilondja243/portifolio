@@ -18,16 +18,16 @@
   --bs-text: #ffffff;
   --bs-muted: #b6c2cc;
 
-  --bs-background: #171c22;
+  --bs-background: #0d1117;
   --bs-card: #20272f;
 
-  --bs-tint: #009776;
-  --bs-tint-soft: #4de0c1;
+  --bs-tint: #00add4;
+  --bs-tint-soft: #3aedff;
 
   --bs-icon: #00bd95;
-  --bs-border: rgba(214, 214, 214, 0.048);
+  --bs-border: rgba(255, 255, 255, 0.08);
 
-  --bs-radius: 12px;
+  --bs-radius: 35px;
   --bs-shadow: 0 20px 60px rgba(0, 0, 0, 0.185);
 }
 
@@ -71,7 +71,7 @@ p, small, b, a, li{
     cursor: pointer;
 }
 .btn:hover{
-    background: #00bd948c;
+    background: #00a7bdc4;
 }
 
 section{

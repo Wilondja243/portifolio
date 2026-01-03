@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     title: "OpenHouse",
-    image: "/projects/uiux.jpg",
+    image: "/projects/openhouse.png",
     description: "Un réseau social public, ouvert et visible pour tout le monde.",
     tech: ["Django DRF", "PostgreSql", "React Native"],
     role: "Full-Stack Developer",

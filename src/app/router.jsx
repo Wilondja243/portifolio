@@ -3,6 +3,7 @@ import About from './page/about';
 import Service from './page/service';
 import Contact from './page/contact';
 import Project from './page/project';
+import Feature from './page/feature-project';
 
 import Hero from '../lib/header/hero';
 import NavBar from '../lib/header/nav-bar';
@@ -24,6 +25,7 @@ export default function Router(){
         </header>
       </div>
       <main>
+        <Feature />
         <About />
         <Service />
         <Project /> 

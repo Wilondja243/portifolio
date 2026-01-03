@@ -12,11 +12,11 @@ export default function useRevealOnScroll(){
             ([entry]) =>{
                 if(entry.isIntersecting){
                     el.classList.add("is-visible");
-                    observer.unobserve(entry.target);
+                    el.classList.add("feature-animated")
                 }
             },
             {
-                threshold: 0.2
+                threshold: 0.1
             }
         )
         observer.observe(el);
