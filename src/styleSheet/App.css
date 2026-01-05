@@ -376,7 +376,7 @@ header {
 }
 
 .feature-wrapper .infos.feature-animated{
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: scale(1) translateY(0);
 }
 
@@ -532,13 +532,13 @@ header {
 }
 
 .reveal{
-  transform: translateY(100px) translateZ(-250px) scale(0.5);
+  transform: translateY(50px) translateZ(-100px) scale(0.7);
   opacity: 0;
   filter: blur(6px);
   transition:
-    transform 1s cubic-bezier(0.19, 1, 0.22, 1),
-    opacity 0.6s ease,
-    filter 0.6s ease;
+    transform 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.4s ease,
+    filter 0.4s ease;
   will-change: transform, opacity, filter;
 }
 
@@ -550,8 +550,8 @@ header {
 
 .reveal .child{
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .reveal.is-visible .child{
   opacity: 1;
@@ -740,17 +740,71 @@ header {
   font-size: 14px;
 }
 
+.contact-wrapper{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 20px;
+}
+
+.contact-wrapper .infos{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-wrapper .info{
+  background: var(--bs-card);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--bs-border);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact-wrapper .info h2{
+  font-weight: 500;
+  font-size: 20px;
+}
+.contact-wrapper .info i{
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff04;
+}
+.bi-send{color: #ff00c8; background: #ff00c81a;}
+.bi-whatsapp{color: #00a100; background: #00a1001c;}
+.bi-linkedin{color: var(--bs-tint); background: #0083a11f;}
+.bi-github{background: var(--bs-border)}
+
+.contact-wrapper .info small{
+  color: var(--bs-muted);
+}
+
+/* Form */
 .contact-form {
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: auto;
   padding: 30px;
+  width: 100%;
   background: var(--bs-card);
-  border-radius: 14px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-
   border: 1px solid #ffffff10;
+}
+
+.form-header h2{
+  font-size: 18px;
+  font-weight: 500;
+}
+.form-header p{
+  color: var(--bs-muted);
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 .contact-form input,
@@ -778,6 +832,7 @@ header {
 
 .contact-form button {
   margin-top: 10px;
+  border-radius: 5px;
 }
 
 .errors{
@@ -793,6 +848,10 @@ header {
 
 
 /* RESPONSIVE */
+@media screen and (max-width: 700px){
+  .contact-wrapper{display: block;}
+  .contact-form{margin-top: 30px;}
+}
 @media (max-width: 500px) {
   .contact-form {
     padding: 22px;

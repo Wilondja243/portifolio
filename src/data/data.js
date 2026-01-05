@@ -1,3 +1,4 @@
+
 export const services = [
     {
         icon_name: "bi bi-display-fill",
@@ -65,6 +66,16 @@ export const projects = [
     role: "Full-Stack Developer",
     detail: "Voir le projet",
     demo: "https://dealflow-9wex.onrender.com",
+    github: "#"
+  },
+  {
+    title: "JobBoard",
+    image: "/projects/jobboard.png",
+    description: "Un Système de gestion de bord",
+    tech: ["Django", "PostgreSql"],
+    role: "Full-Stack Developer",
+    detail: "Voir le projet",
+    demo: "https://jobboard-u8g5.onrender.com",
     github: "#"
   }
 ];

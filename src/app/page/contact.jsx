@@ -64,34 +64,71 @@ export default function Contact() {
         </p>
       </div>
 
-      <form className="contact-form" onSubmit={onFormSubmit} method="post">
-        {Object.values(errors).map((error, i)=>(
-          <div key={i} className="errors">{error}</div>
-        ))}
-        
-        <input
-          type="text"
-          value={username}
-          onChange={(e)=> setUsername(e.target.value)}
-          placeholder="Nom complet"
-        />
-        <input
-          type="text"
-          value={subject}
-          onChange={(e)=> setSubject(e.target.value)}
-          placeholder="Sujet"
-        />
-        <textarea
-          rows="6"
-          value={description}
-          onChange={(e)=> setDescription(e.target.value)}
-          placeholder="Votre message">
-        </textarea>
-        <Button
-          disabled={isSending}
-          text={isSending ? "Envoi en cours..." : "Envoyer le message"}
-        />
-      </form>
+      <div className="contact-wrapper">
+        <div className="infos">
+          <a href="mailto:monalinacampany@gmail.com" className="info email">
+            <i className="bi bi-send"></i>
+            <div>
+              <h2>Email</h2>
+              <small>monalinacampany@gmail.com</small>
+            </div>
+          </a>
+          <a href="https://wa.me/message/3BLU6AZOQCOCN1" target="_black" className="info whatsapp">
+            <i className="bi bi-whatsapp"></i>
+            <div>
+              <h2>Whatsapp</h2>
+              <small>Contactez moi sur whatsapp</small>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/wilondja-ebuela-8a88ab374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className="info email">
+            <i className="bi bi-linkedin"></i>
+            <div>
+              <h2>LinkedIn</h2>
+              <small>Voir mon profil linkedIn</small>
+            </div>
+          </a>
+          <a href="https://github.com/Wilondja243" target="_blank" className="info email">
+            <i className="bi bi-github"></i>
+            <div>
+              <h2>GitHub</h2>
+              <small>Voir mon code</small>
+            </div>
+          </a>
+        </div>
+        <form className="contact-form" onSubmit={onFormSubmit} method="post">
+          <div className="form-header">
+            <h2>Envoyer un message</h2>
+            <p> Parlez-moi de votre projet et je vous répondrai dans moins de 24 h.</p>
+          </div>
+
+          {Object.values(errors).map((error, i)=>(
+            <div key={i} className="errors">{error}</div>
+          ))}
+          
+          <input
+            type="text"
+            value={username}
+            onChange={(e)=> setUsername(e.target.value)}
+            placeholder="Nom complet"
+          />
+          <input
+            type="text"
+            value={subject}
+            onChange={(e)=> setSubject(e.target.value)}
+            placeholder="Sujet"
+          />
+          <textarea
+            rows="6"
+            value={description}
+            onChange={(e)=> setDescription(e.target.value)}
+            placeholder="Votre message">
+          </textarea>
+          <Button
+            disabled={isSending}
+            text={isSending ? "Envoi en cours..." : "Envoyer le message"}
+          />
+        </form>
+      </div>
     </section>
   );
 }

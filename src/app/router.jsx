@@ -25,8 +25,8 @@ export default function Router(){
         </header>
       </div>
       <main>
-        <Feature />
         <About />
+        <Feature />
         <Service />
         <Project /> 
         <Contact />
